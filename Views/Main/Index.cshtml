@@ -7,14 +7,15 @@
         <title>Dojo Survey</title>
     </head>
     <body>
-        <form action="/result" method="post">
+      <div class="main">
+        <form action="result" method="post">
             <div class="form-group">
               <label for="username">Your Name:</label>
-              <input type="text" class="form-control" id="username">
+              <input type="text" class="form-control" id="username" name="username">
             </div>
             <div class="form-group">
               <label for="location">Dojo Location:</label>
-              <select class="form-control" id="location">
+              <select class="form-control" id="location" name="location">
                 <option>Seattle</option>
                 <option>Austin</option>
                 <option>Boise</option>
@@ -24,7 +25,7 @@
             </div>
             <div class="form-group">
               <label for="favlang">Favorite Language:</label>
-              <select class="form-control" id="favlang">
+              <select class="form-control" id="favlang" name="favlang">
                 <option>C#</option>
                 <option>Python</option>
                 <option>Java</option>
@@ -34,9 +35,10 @@
             </div>
             <div class="form-group">
               <label for="comment">Comment (optional)</label>
-              <textarea class="form-control" id="comment" rows="6"></textarea>
+              <textarea class="form-control" id="comment" name="comment" rows="6"></textarea>
             </div>
             <input type="submit" id="submitbtn">
         </form>
+      </div>
     </body>
 </html>

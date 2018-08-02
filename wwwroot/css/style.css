@@ -1,6 +1,27 @@
-form{
-    width: 40%;
+.main form{
+    width: 80%;
     border: 3px solid black;
     padding: 3%;
+    margin: 5% 10% 5% 10%;
+}
+
+.results{
+    border: 2px solid black;
     margin: 10% 10% 10% 10%;
+    padding: 3%;
+}
+
+.results form{
+    float: right;
+    vertical-align: bottom;
+}
+
+.categories{
+    display: inline-block;
+}
+
+.formdata{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10%;
 }

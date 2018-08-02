@@ -8,7 +8,22 @@
     </head>
     <body>
         <div class="results">
-            <h1>here we are</h1>
+            <h1 style="text-decoration: underline;">Submitted Info</h1>
+            <div class="categories">
+                <h2>Name:</h2>
+                <h2>Dojo Location:</h2>
+                <h2>Favorite Language:</h2>
+                <h2>Comment:</h2>
+            </div>
+            <div class="formdata">
+                <h2>@ViewBag.Name</h2>
+                <h2>@ViewBag.Location</h2>
+                <h2>@ViewBag.FavLang</h2>
+                <h2>@ViewBag.Comment</h2>
+            </div>
+            <form action ="/" method="get">
+                <input type="submit" value="Go Back">
+            </form>
         </div>
     </body>
 </html>
