@@ -18,21 +18,6 @@ namespace DojoSurvey.Controllers
         [HttpPost("result")]
         public IActionResult Result(FormData data)
         {
-            // string defName = "John Doe";
-            // if(username == null)
-            // {
-                // ViewBag.Name=defName;
-                // ViewBag.Location=location;
-                // ViewBag.FavLang=favlang;
-                // ViewBag.Comment=comment;
-            // }
-            // else
-            // {
-                // ViewBag.Name=username;
-                // ViewBag.Location=location;
-                // ViewBag.FavLang=favlang;
-                // ViewBag.Comment=comment;
-            // }
             FormData newForm = new FormData()
             {
                 Name = data.Name,
