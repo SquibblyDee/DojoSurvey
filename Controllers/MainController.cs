@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+
+using DojoSurvey.Models;
+
 namespace DojoSurvey.Controllers
 {
     public class MainController : Controller
@@ -12,27 +15,33 @@ namespace DojoSurvey.Controllers
             return View();
         }
 
-        [HttpPost]
-        [Route("result")]
-        public IActionResult Result(string username, string location, string favlang, string comment)
+        [HttpPost("result")]
+        public IActionResult Result(FormData data)
         {
-            string defName = "John Doe";
-            if(username == null)
+            // string defName = "John Doe";
+            // if(username == null)
+            // {
+                // ViewBag.Name=defName;
+                // ViewBag.Location=location;
+                // ViewBag.FavLang=favlang;
+                // ViewBag.Comment=comment;
+            // }
+            // else
+            // {
+                // ViewBag.Name=username;
+                // ViewBag.Location=location;
+                // ViewBag.FavLang=favlang;
+                // ViewBag.Comment=comment;
+            // }
+            FormData newForm = new FormData()
             {
-                ViewBag.Name=defName;
-                ViewBag.Location=location;
-                ViewBag.FavLang=favlang;
-                ViewBag.Comment=comment;
-            }
-            else
-            {
-                ViewBag.Name=username;
-                ViewBag.Location=location;
-                ViewBag.FavLang=favlang;
-                ViewBag.Comment=comment;
-            }
+                Name = data.Name,
+                Location = data.Location,
+                Language = data.Language,
+                Comment = data.Comment
+            };
     
-            return View();
+            return View(newForm);
         }
 
         public IActionResult Result(string location, string favlang)
