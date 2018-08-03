@@ -15,18 +15,11 @@ namespace DojoSurvey.Controllers
             return View();
         }
 
+        ////This takes our form data and places it into a new instace of our FormData model named data.
         [HttpPost("result")]
         public IActionResult Result(FormData data)
         {
-            FormData newForm = new FormData()
-            {
-                Name = data.Name,
-                Location = data.Location,
-                Language = data.Language,
-                Comment = data.Comment
-            };
-    
-            return View(newForm);
+            return View(data);
         }
 
         public IActionResult Result(string location, string favlang)
